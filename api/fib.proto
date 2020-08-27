@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "./fibproto";
+
+service Fibonacci{
+    rpc Fib (NumReq) returns (NumResp);
+    rpc Sqr (NumReq) returns (NumRespQ);
+}
+
+message NumReq { 
+    int64 n = 1; 
+}
+
+message NumResp { 
+    int64 nFib = 1; 
+}
+
+message NumRespQ { 
+    int64 nSqr = 1; 
+}

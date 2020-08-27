@@ -1,0 +1,12 @@
+pipelines:
+  example:
+    input:
+      type: file
+      persistence_mode: async
+      watching_dir: /var/log/input
+      filename_pattern: "*.log"
+      offsets_file: /var/log/offsets/offsets.yaml
+    output:
+      type: gelf
+      short_message_field: msg
+      endpoint: graylog:12201

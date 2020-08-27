@@ -1,0 +1,5 @@
+- file: /var/log/input/file.log
+  inode: 17838670
+  source_id: 2088555260
+  streams:
+    not_set: 88

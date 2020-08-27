@@ -1,0 +1,10 @@
+# упал сервис Фибоначчи, если лежит в течении 1 минуты 
+groups:
+ - name: fibonacci
+   rules:
+     - alert: service_is_down
+       expr: up == 0
+       for: 1m
+       annotations:
+         summary: service is down
+         description: '{{ $labels.instance }} is down'
